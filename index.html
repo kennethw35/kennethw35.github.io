@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEL凌霄战队 - 招募队员</title>
+  <!-- 引入Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义主题 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#FF7D00',
+            dark: '#1D2939',
+            light: '#F9FAFB'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
+  
+  <style>
+    /* 全局动画设置 */
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* 滚动条美化 */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #165DFF;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0E42D2;
+    }
+  </style>
+</head>
+
+<body class="bg-light font-sans text-dark">
+  <!-- 导航栏 -->
+  <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-xl">SEL</span>
+        </div>
+        <h1 class="text-xl font-bold text-primary">凌霄战队</h1>
+      </div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#recruit" class="font-medium hover:text-primary transition-colors">招募信息</a>
+        <a href="#positions" class="font-medium hover:text-primary transition-colors">招募岗位</a>
+        <a href="#contact" class="font-medium hover:text-primary transition-colors">联系我们</a>
+      </nav>
+      <button class="md:hidden text-dark text-xl">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- 英雄区域 -->
+  <section class="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-primary/5 to-primary/10">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center fade-in">
+        <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-bold mb-6 text-dark leading-tight">
+          加入 <span class="text-primary">SEL凌霄战队</span>
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-10">
+          与我们一同征战赛场，挑战极限，共创辉煌
+        </p>
+        <a href="#recruit" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-primary/30 hover:shadow-xl">
+          了解招募详情
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 招募信息 -->
+  <section id="recruit" class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16 fade-in" style="animation-delay: 0.1s;">
+          <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">招募信息</h2>
+          <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- 正式队员卡片 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 card-hover fade-in" style="animation-delay: 0.2s;">
+            <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+              <i class="fa fa-user-circle text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">正式队员</h3>
+            <p class="text-gray-600 mb-6">我们正在寻找4名优秀的正式队员，共同组成核心战斗团队，参与各项重要比赛。</p>
+            <div class="flex items-center text-primary font-bold">
+              <span>招募人数：4名</span>
+              <i class="fa fa-arrow-right ml-2"></i>
+            </div>
+          </div>
+          
+          <!-- 替补队员卡片 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 card-hover fade-in" style="animation-delay: 0.3s;">
+            <div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+              <i class="fa fa-users text-secondary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">替补队员</h3>
+            <p class="text-gray-600 mb-6">招募3名替补队员，作为团队的后备力量，随时准备上场，与团队共同成长。</p>
+            <div class="flex items-center text-secondary font-bold">
+              <span>招募人数：3名</span>
+              <i class="fa fa-arrow-right ml-2"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 招募岗位 -->
+  <section id="positions" class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16 fade-in" style="animation-delay: 0.4s;">
+          <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">招募岗位</h2>
+          <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+          <p class="mt-6 text-gray-600">我们期待各有所长的你加入，共同组成强大的战斗团队</p>
+        </div>
+        
+        <div class="space-y-6 fade-in" style="animation-delay: 0.5s;">
+          <!-- 岗位1 -->
+          <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="flex flex-wrap justify-between items-start gap-4">
+              <div>
+                <h3 class="text-lg font-bold">核心选手</h3>
+                <p class="text-gray-600 mt-1">团队核心成员，负责主要战术执行</p>
+              </div>
+              <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">正式队员</span>
+            </div>
+          </div>
+          
+          <!-- 岗位2 -->
+          <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="flex flex-wrap justify-between items-start gap-4">
+              <div>
+                <h3 class="text-lg font-bold">技术支援</h3>
+                <p class="text-gray-600 mt-1">负责技术支持与策略辅助</p>
+              </div>
+              <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">正式队员</span>
+            </div>
+          </div>
+          
+          <!-- 岗位3 -->
+          <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="flex flex-wrap justify-between items-start gap-4">
+              <div>
+                <h3 class="text-lg font-bold">战术分析</h3>
+                <p class="text-gray-600 mt-1">负责分析对手战术与制定应对策略</p>
+              </div>
+              <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">正式队员</span>
+            </div>
+          </div>
+          
+          <!-- 岗位4 -->
+          <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="flex flex-wrap justify-between items-start gap-4">
+              <div>
+                <h3 class="text-lg font-bold">全能选手</h3>
+                <p class="text-gray-600 mt-1">具备多方面能力，可适应多种角色</p>
+              </div>
+              <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">正式队员</span>
+            </div>
+          </div>
+          
+          <!-- 替补岗位 -->
+          <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="flex flex-wrap justify-between items-start gap-4">
+              <div>
+                <h3 class="text-lg font-bold">替补队员</h3>
+                <p class="text-gray-600 mt-1">作为后备力量，随时准备上场替换</p>
+              </div>
+              <span class="bg-secondary/10 text-secondary text-sm font-medium px-3 py-1 rounded-full">替补队员</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系我们 -->
+  <section id="contact" class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16 fade-in" style="animation-delay: 0.6s;">
+          <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">联系我们</h2>
+          <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+          <p class="mt-6 text-gray-600">有意向加入我们？请通过以下方式联系</p>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-2xl mx-auto fade-in" style="animation-delay: 0.7s;">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+              <i class="fa fa-qq text-primary text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">加入咨询QQ</h3>
+            <p class="text-gray-600 mb-6">添加QQ了解更多招募详情，备注"SEL战队招募"</p>
+            <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-full">
+              <i class="fa fa-qq text-primary"></i>
+              <span class="font-medium text-lg">3654035217</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-10">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="flex items-center gap-2 justify-center mb-6">
+          <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+            <span class="text-primary font-bold text-sm">SEL</span>
+          </div>
+          <h2 class="text-lg font-bold">凌霄战队</h2>
+        </div>
+        <p class="text-gray-400 text-sm">© 2023 SEL凌霄战队 版权所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // 回到顶部按钮
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.remove('opacity-0', 'invisible');
+        backToTopBtn.classList.add('opacity-100', 'visible');
+      } else {
+        backToTopBtn.classList.remove('opacity-100', 'visible');
+        backToTopBtn.classList.add('opacity-0', 'invisible');
+      }
+      
+      // 导航栏滚动效果
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('py-2', 'shadow');
+        header.classList.remove('py-3');
+      } else {
+        header.classList.add('py-3');
+        header.classList.remove('py-2', 'shadow');
+      }
+    });
+    
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
